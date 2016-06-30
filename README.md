@@ -12,6 +12,7 @@ the full stack with particle io api
     React
     React Router
     Redux (planned)
+    ES6
     Webpack
     Express
     Mongoose (ORM)
