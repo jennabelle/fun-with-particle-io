@@ -1,14 +1,12 @@
-# fun with particle io api
+# Fun With Particle IO API
 
 the full stack with particle io api
 
 ###Getting Started###
 
 ```
-	> git clone https://github.com/jennabelle/fun-with-particle-io.git
-	> cd fun-with-particle-io
-	> npm install
-	> npm start
+	npm install
+	npm start
 ```
 
 ###Tech Stack###
