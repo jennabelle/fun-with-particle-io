@@ -11,6 +11,7 @@ the full stack with particle io api
 
     React
     React Router
+    Redux (planned)
     Webpack
     Express
     Mongoose (ORM)
@@ -19,5 +20,3 @@ the full stack with particle io api
     deployed on Heroku (planned)
     Bootstrap
     (planned) - Mocha/Chai
-    (probably) - Less
-    (maybe) - server-side rendering
