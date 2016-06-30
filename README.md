@@ -4,10 +4,8 @@ the full stack with particle io api
 
 ###Getting Started###
 
-```
 	npm install
 	npm start
-```
 
 ###Tech Stack###
 
