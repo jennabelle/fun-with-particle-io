@@ -18,4 +18,11 @@
 .get_device_list {
     margin-top: 200px;
     text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: #00adef;
+    color: #fff;
+    font-family: 'Gotham SSm A','Gotham SSm B',proxima-nova,"Helvetica Neue",helvetica,arial,sans-serif;
 }
+
