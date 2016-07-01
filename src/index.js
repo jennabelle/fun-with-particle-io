@@ -19,6 +19,7 @@ import ReactDOM from 'react-dom';
 // https://api.particle.io/v1/devices/2a002c000a47343232363230/rssi?access_token=d6576383889e1526c95853391923584b508071c4
 
 // #4 call-a-function
+// https://api.particle.io/v1/devices/2a002c000a47343232363230/rand?access_token=d6576383889e1526c95853391923584b508071c4
 
 
 const ACCESS_TOKEN = 'd6576383889e1526c95853391923584b508071c4';
