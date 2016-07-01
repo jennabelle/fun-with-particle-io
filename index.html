@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
   	<title>Jenna Vuong - Fun with Particle IO API</title>
+
+  	<!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body>
     <div class="container"></div>
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <!-- standard trick: scripts before closing 'body' tag ensures page elements have all loaded before referencing in code -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+
     <script>
       /* Set height of image equal to height of window */
       /* If height of device is smaller than height of content, specify min height should be equal to the window */
       $(".container").css("min-height",$(window).height());
     </script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
   </body>
   <script src="/bundle.js"></script>
 </html>

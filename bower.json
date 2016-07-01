@@ -1,0 +1,25 @@
+{
+  "name": "Fun With Particle IO",
+  "description": "an mvp for integrating with particle-io-api",
+  "main": "index.js",
+  "authors": [
+    "Jenna Vuong <jennavuong@gmail.com>"
+  ],
+  "version": "1.0.0",
+  "license": "ISC",
+  "keywords": [
+    "particle"
+  ],
+  "homepage": "https://jennavuong.com",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
