@@ -22,6 +22,6 @@ import App from './components/app';
 // https://api.particle.io/v1/devices/2a002c000a47343232363230/rand?access_token=d6576383889e1526c95853391923584b508071c4
 
 
-const ACCESS_TOKEN = 'd6576383889e1526c95853391923584b508071c4';
+const ACCESS_TOKEN = 'd6576383889e1526c95853391923584b508071c4'; // pass as props
 
-ReactDOM.render(<App />, document.getElementById('container'));
+ReactDOM.render(<App access_token='d6576383889e1526c95853391923584b508071c4' />, document.getElementById('container'));

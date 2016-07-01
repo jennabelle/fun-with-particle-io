@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class App extends Component {
 
-	getDeviceList() {
+	constructor() {
+		super()
 
+		this.state = {}
+	}
+	getDeviceList() {
+		axios.get(`https://api.particle.io/v1/devices?access_token=${this.props.access_token}`)
+			.then(function(response) {
+				console.log('It worked!');
+			})
+			.catch(function(response) {
+				console.log('Hello!');
+			})
 	}
 	render() {
 		return (
