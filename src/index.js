@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import App from './components/app';
 
 // ENDPOINTS
 // #1 list-devices
@@ -24,8 +24,4 @@ import ReactDOM from 'react-dom';
 
 const ACCESS_TOKEN = 'd6576383889e1526c95853391923584b508071c4';
 
-const App = () => {
-	return <div>Hi!</div>;
-}
-
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(<App />, document.getElementById('container'));

@@ -1,0 +1,20 @@
+.app_background {
+  background-image: url("../src/images/triangles.png");
+  width: 100%;
+  height: 300px;
+  background-position: center; /* css trick to get full background image */
+  background-size: cover; /* image will be centered no matter how wide the screen is */
+  font-family: 'Gotham A';
+}
+
+#body_background {
+	background-color: #F7F7F7;
+}
+
+.app_header {
+	background-image: url("../src/images/particle-horizontal.png");
+}
+
+.get_device_list {
+	
+}

@@ -12,9 +12,12 @@
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+	<!-- need permission to add to approved list of whitelisted domains for particle font to be loaded --> 
+    <!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6107112/665726/css/fonts.css" /> -->
   </head>
-  <body>
-    <div class="container"></div>
+  <body id="body_background">
+    <div id="container"></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -22,11 +25,11 @@
     <!-- standard trick: scripts before closing 'body' tag ensures page elements have all loaded before referencing in code -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
 
-    <script>
+<!--     <script>
       /* Set height of image equal to height of window */
       /* If height of device is smaller than height of content, specify min height should be equal to the window */
-      $(".container").css("min-height",$(window).height());
-    </script>
+      $("#container").css("min-height",$(window).height());
+    </script> -->
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
