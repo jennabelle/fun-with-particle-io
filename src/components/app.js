@@ -6,16 +6,17 @@ class App extends Component {
 
 	constructor() {
 		super()
+		this.state = {
 
-		this.state = {}
+		}
 	}
 	getDeviceList() {
 		axios.get('https://api.particle.io/v1/devices?access_token=d6576383889e1526c95853391923584b508071c4')
 			.then(function(response) {
-				console.log('It worked! Response: ', response);
+				console.log('It worked! Response: ', response.data);
 			})
 			.catch(function(response) {
-				console.log('Hello!');
+				console.log('Error in getDeviceList!');
 			})
 	}
 	render() {
@@ -29,10 +30,20 @@ class App extends Component {
 
 					<div className="row">
 						<div className="col-md-6 col-md-offset-5">
-							<button type="button" className="btn btn-primary get_device_list" onClick={this.getDeviceList}>
+							<button type="button" className="btn btn-primary btn_get_device_list" onClick={this.getDeviceList}>
 								Show My Devices
 							</button>
 						</div>
+					</div>
+
+					<div className="row">
+						<div className="col-md-6">
+							Hi!
+						</div>
+						<div className="col-md-6">
+							Hola!
+						</div>
+
 					</div>
 				</div>
 			</div>);

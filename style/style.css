@@ -15,8 +15,9 @@
 	background-image: url("../src/images/particle-horizontal.png");
 }
 
-.get_device_list {
+.btn_get_device_list {
     margin-top: 250px;
+    margin-bottom: 120px;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
