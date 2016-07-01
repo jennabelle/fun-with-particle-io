@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 export default class NavBar extends Component  {
-
-	// constructor(props) {
-	// 	super();
-	// }
+	
 	render() {
 		return (
 		<div className="navbar navbar-default navbar-fixed-top">
@@ -26,8 +23,6 @@ export default class NavBar extends Component  {
 	  				</ul>
 	  			</div>
 	  		</div>
-	  	</div>
-	  	);
+	  	</div>);
 	}
-
 }
