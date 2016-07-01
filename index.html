@@ -7,6 +7,14 @@
   </head>
   <body>
     <div class="container"></div>
+    
+    <!-- standard trick: scripts before closing 'body' tag ensures page elements have all loaded before referencing in code -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+    <script>
+      /* Set height of image equal to height of window */
+      /* If height of device is smaller than height of content, specify min height should be equal to the window */
+      $(".container").css("min-height",$(window).height());
+    </script>
   </body>
   <script src="/bundle.js"></script>
 </html>
