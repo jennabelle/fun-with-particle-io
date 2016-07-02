@@ -18,14 +18,13 @@ class App extends Component {
 
 		axios.get('https://api.particle.io/v1/devices?access_token=d6576383889e1526c95853391923584b508071c4')
 			.then( (response) => {
-
 				this.setState({
       		device_list: response.data
     		});
 				
 				// this.updateDeviceList( response.data );
 			})
-			.catch(function(response) {
+			.catch( (response) => {
 				console.log('Error in getDeviceList! Error: ', response);
 			})
 	}
@@ -56,7 +55,7 @@ class App extends Component {
 
 									return (
 										<div key={ index } className="col-md-6">
-											<Link to="ShowDeviceInfo">
+											<Link to={ `ShowDeviceInfo/${name.id}` }>
 												<h2>{ name.name }</h2>
 												<img src='https://docs.particle.io/assets/images/photon_vector2_600.png' height="200" />
 											</Link>
