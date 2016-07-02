@@ -14,15 +14,15 @@ class App extends Component {
 	}
 	getDeviceList() {
 
-		let that = this;
+		// let that = this;
 
 		axios.get('https://api.particle.io/v1/devices?access_token=d6576383889e1526c95853391923584b508071c4')
-			.then(function(response) {
+			.then( (response) => {
 
-				that.setState({
+				this.setState({
       		device_list: response.data
     		});
-
+				
 				// this.updateDeviceList( response.data );
 			})
 			.catch(function(response) {
@@ -33,6 +33,7 @@ class App extends Component {
 		console.log('inside updateDeviceList()!');
 	}
 	render() {
+
 		return (
 
 			<div>
@@ -53,13 +54,13 @@ class App extends Component {
 
 							{ this.state.device_list.map(function(name, index) {
 
-									return <div key={ index } className="col-md-6">
-
-										<h2>{ name.name }</h2>
-										<Link to="ShowDeviceInfo" params={{ name: name.id }}>
-											<img src='https://docs.particle.io/assets/images/photon_vector2_600.png' height="200" />
-										</Link>
-									</div>;
+									return (
+										<div key={ index } className="col-md-6">
+											<Link to="ShowDeviceInfo">
+												<h2>{ name.name }</h2>
+												<img src='https://docs.particle.io/assets/images/photon_vector2_600.png' height="200" />
+											</Link>
+										</div>);
 							}) }
 
 					</div>

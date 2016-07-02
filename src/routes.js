@@ -6,9 +6,8 @@ import ShowDeviceInfo from './components/ShowDeviceInfo';
 
 export default (
   <Router history={ browserHistory }>
-    <Route path="/" component={ App }>
-    	<Route path="ShowDeviceInfo" component={ ShowDeviceInfo } />
-    </Route>
+    <Route path="/" component={ App } />
+    <Route path="ShowDeviceInfo" component={ ShowDeviceInfo } />
   </Router>
 );
 
