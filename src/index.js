@@ -28,5 +28,3 @@ const ACCESS_TOKEN = 'd6576383889e1526c95853391923584b508071c4'; // pass as prop
 ReactDOM.render(
 		<Router history={browserHistory} routes={routes} />, document.getElementById('container')
 	);
-
-// ReactDOM.render(<App access_token='d6576383889e1526c95853391923584b508071c4' />, document.getElementById('container'));

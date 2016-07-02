@@ -40,12 +40,12 @@ export default class ShowDeviceInfo extends Component {
 				<p><b>Status:</b> { this.state.device_object.status }</p>
 				{ this.state.device_object.cellular ? <p><b>Celluluar:</b> { this.state.device_object.cellular.toString() }</p> : null }
 				
-				<p><b>Functions:</b>
-				{ this.state.device_object.functions ? this.state.device_object.functions.map( (name) => {
-							return <ul><li><Link to="">{ name }</Link></li></ul>
+				<p><b>Functions:</b></p>
+				{ this.state.device_object.functions ? this.state.device_object.functions.map( (name, index) => {
+							return <ul key={index}><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${name}` }>{ name }</Link></li></ul>
 					}) : null
 				}
-				</p>
+				
 			</div>
 			);
 	}
