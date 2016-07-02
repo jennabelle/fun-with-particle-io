@@ -28,13 +28,16 @@ export default class ShowDeviceInfo extends Component {
 
 		console.log('inside render! this.state.device_object: ', this.state.device_object)
 
-		let currentDevice = this.state.device_object
-
 		return (
 			<div>
-				<p>{ this.state.device_object.name }</p>
-				{ this.state.device_object.connected ? <p>{ this.state.device_object.connected.toString() }</p> : null }
-				<p>{ this.state.device_object.cellular }</p>
+				<p><b>Name:</b> { this.state.device_object.name }</p>
+				{ this.state.device_object.connected ? <p><b>Connected:</b> { this.state.device_object.connected.toString() }</p> : null }
+				<p><b>Last IP Address:</b> { this.state.device_object.last_ip_address }</p>
+				<p><b>Last Heard:</b> { this.state.device_object.last_heard }</p>
+				<p><b>Product Id:</b> { this.state.device_object.product_id }</p>
+				<p><b>Platform Id:</b> { this.state.device_object.platform_id }</p>
+				<p><b>Status:</b> { this.state.device_object.status }</p>
+				{ this.state.device_object.cellular ? <p><b>Celluluar:</b> { this.state.device_object.cellular.toString() }</p> : null }
 			</div>
 			);
 	}

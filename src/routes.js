@@ -25,4 +25,4 @@ path      			component
 
 */
 
-// https://api.particle.io/v1/devices/2a002c000a47343232363230?access_token=d6576383889e1526c95853391923584b508071c4
+
