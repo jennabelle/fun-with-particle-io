@@ -27,3 +27,8 @@
     font-family: 'Gotham SSm A','Gotham SSm B',proxima-nova,"Helvetica Neue",helvetica,arial,sans-serif;
 }
 
+.view_device_list {
+	margin: 25px;
+	border: 25px;
+	padding: 25px;
+}

@@ -13,12 +13,12 @@ class App extends Component {
 	}
 	getDeviceList() {
 
+		let that = this;
+
 		axios.get('https://api.particle.io/v1/devices?access_token=d6576383889e1526c95853391923584b508071c4')
 			.then(function(response) {
 
-				console.log('It worked! Response: ', response.data);
-
-				this.setState({
+				that.setState({
       		device_list: response.data
     		});
 
@@ -48,13 +48,13 @@ class App extends Component {
 						</div>
 					</div>
 
-					<div className="row">
-						<div className="col-md-6">
-							Hi!
-						</div>
-						<div className="col-md-6">
-							Hola!
-						</div>
+					<div className="row view_device_list">
+
+							{ this.state.device_list.map(function(name, index) {
+									return <div key={ index } className="col-md-6">
+										<li>{ name.name }</li>
+									</div>;
+							}) }
 
 					</div>
 				</div>
