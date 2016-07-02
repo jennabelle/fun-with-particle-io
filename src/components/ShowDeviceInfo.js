@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router';
 import _ from 'underscore';
 
 export default class ShowDeviceInfo extends Component {
@@ -13,6 +14,7 @@ export default class ShowDeviceInfo extends Component {
 		}
 	}
 	componentWillMount() {
+
 		axios.get(`https://api.particle.io/v1/devices/${this.state.device_id}?access_token=d6576383889e1526c95853391923584b508071c4`)
 			.then( (response) => {
 					this.setState({
@@ -22,7 +24,6 @@ export default class ShowDeviceInfo extends Component {
 			.catch( (response) => {
 					console.log('show device info error! response: ', response)
 			})
-
 	}
 	render() {
 
@@ -38,6 +39,13 @@ export default class ShowDeviceInfo extends Component {
 				<p><b>Platform Id:</b> { this.state.device_object.platform_id }</p>
 				<p><b>Status:</b> { this.state.device_object.status }</p>
 				{ this.state.device_object.cellular ? <p><b>Celluluar:</b> { this.state.device_object.cellular.toString() }</p> : null }
+				
+				<p><b>Functions:</b>
+				{ this.state.device_object.functions ? this.state.device_object.functions.map( (name) => {
+							return <ul><li><Link to="">{ name }</Link></li></ul>
+					}) : null
+				}
+				</p>
 			</div>
 			);
 	}
