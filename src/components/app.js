@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import NavBar from './navbar';
+import { Link } from 'react-router';
 import _ from 'underscore';
 
 class App extends Component {
@@ -55,8 +56,9 @@ class App extends Component {
 									return <div key={ index } className="col-md-6">
 
 										<h2>{ name.name }</h2>
-										<img src='https://docs.particle.io/assets/images/photon_vector2_600.png' height="200" />
-										
+										<Link to="ShowDeviceInfo" params={{ name: name.id }}>
+											<img src='https://docs.particle.io/assets/images/photon_vector2_600.png' height="200" />
+										</Link>
 									</div>;
 							}) }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
+import { Router, browserHistory } from 'react-router';
+import routes from './routes';
 
 // ENDPOINTS
 // #1 list-devices
@@ -24,4 +25,8 @@ import App from './components/app';
 
 const ACCESS_TOKEN = 'd6576383889e1526c95853391923584b508071c4'; // pass as props
 
-ReactDOM.render(<App access_token='d6576383889e1526c95853391923584b508071c4' />, document.getElementById('container'));
+ReactDOM.render(
+		<Router history={browserHistory} routes={routes} />, document.getElementById('container')
+	);
+
+// ReactDOM.render(<App access_token='d6576383889e1526c95853391923584b508071c4' />, document.getElementById('container'));
