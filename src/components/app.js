@@ -4,7 +4,7 @@ import NavBar from './navbar';
 import { Link } from 'react-router';
 import _ from 'underscore';
 
-class App extends Component {
+export default class App extends Component {
 
 	constructor(props) {
 		super(props)
@@ -67,5 +67,3 @@ class App extends Component {
 			</div>);
 	}
 }
-
-export default App;
