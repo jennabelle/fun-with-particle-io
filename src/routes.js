@@ -13,8 +13,9 @@ export default (
 
     <Route component={ ShowDeviceInfo }>
     	<Route path="ShowDeviceInfo/:deviceId" component={ ShowDeviceInfo } />
-    	<Route path="ShowDeviceInfo/:deviceId/:functionName" component={ CallFunction } />
     </Route>
+
+    <Route path="ShowDeviceInfo/:deviceId/:functionName" component={ CallFunction } />
 
   </Router>
 );

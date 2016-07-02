@@ -16,7 +16,7 @@ export default class callFunction extends Component {
 	componentWillMount() {
 
 		axios.post(`https://api.particle.io/v1/devices/${this.state.device_id}/${this.state.functionName}?access_token=d6576383889e1526c95853391923584b508071c4`,
-				{ arg: 'testing callFunction component!' })
+				{ arg: 'testing callFunction!' })
 			.then( (response) => {
 					console.log('call function response: ', response.data)
 			})
@@ -25,6 +25,8 @@ export default class callFunction extends Component {
 			})
 	}
 	render() {
+		
+		console.log('inside call function component!')
 
 		return <div>callFunction!</div>
 	}
