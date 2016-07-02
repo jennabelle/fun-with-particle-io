@@ -51,8 +51,12 @@ class App extends Component {
 					<div className="row view_device_list">
 
 							{ this.state.device_list.map(function(name, index) {
+
 									return <div key={ index } className="col-md-6">
-										<li>{ name.name }</li>
+
+										<h2>{ name.name }</h2>
+										<img src='https://docs.particle.io/assets/images/photon_vector2_600.png' height="200" />
+										
 									</div>;
 							}) }
 
