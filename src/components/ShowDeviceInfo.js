@@ -9,8 +9,11 @@ export default class ShowDeviceInfo extends Component {
 		super(props)
 
 		this.state = {
-			device_id: this.props.params.deviceId,
-			device_object: {}
+			device_id: this.props.params.deviceId, // passed in parameter from routes.js
+			device_object: {},
+			variable_object: {},
+			variable_object_keys: [], // save all object keys for variable_object
+			selected_variable: '' // user selected variable
 		}
 	}
 	componentWillMount() {
@@ -18,7 +21,8 @@ export default class ShowDeviceInfo extends Component {
 		axios.get(`https://api.particle.io/v1/devices/${this.state.device_id}?access_token=d6576383889e1526c95853391923584b508071c4`)
 			.then( (response) => {
 					this.setState({
-						device_object: response.data
+						device_object: response.data,
+						variable_object: response.data.variables
 					});
 			})
 			.catch( (response) => {
@@ -26,6 +30,16 @@ export default class ShowDeviceInfo extends Component {
 			})
 	}
 	render() {
+
+		// save object keys of 'variables' field to easily iterate over and render
+		this.state.variable_object ? _.each(this.state.variable_object, (val, key) => {
+
+				if (this.state.variable_object.hasOwnProperty( key )) {
+					this.state.variable_object_keys.push(key)
+				} 
+			}) : null
+
+		console.log('variable_object_keys: ', this.state.variable_object_keys)
 
 		return (
 			<div>
@@ -45,6 +59,12 @@ export default class ShowDeviceInfo extends Component {
 					}) : null
 				}
 
+				<p><b>Variables:</b></p>
+				{
+					this.state.variable_object_keys.map( (val, index) => {
+						return <ul key={ index }><li>{ val }</li></ul>
+					})
+				}
 			</div>
 			);
 	}
