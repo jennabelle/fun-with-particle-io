@@ -32,7 +32,7 @@ export default class App extends Component {
 				<NavBar />
 				<div className='app_background'>
 
-					<div className='app_header'></div>
+					<img src="http://blog.particle.io/images/particle-horizontal-dark.png" className="logo" />
 
 					<div className="row">
 						<div className="col-md-6 col-md-offset-5">
