@@ -40,8 +40,6 @@ export default class ShowDeviceInfo extends Component {
 				} 
 			}) : null
 
-		console.log('variable_object_keys: ', this.state.variable_object_keys)
-
 		return (
 			<div>
 				<NavBar />
@@ -64,7 +62,7 @@ export default class ShowDeviceInfo extends Component {
 				<p><b>Variables:</b></p>
 				{
 					this.state.variable_object_keys.map( (val, index) => {
-						return <ul key={ index }><li>{ val }</li></ul>
+						return <ul key={ index }><li><Link to={ `ShowVarInfo/${this.state.device_id}/${val}` }>{ val }</Link></li></ul>
 					})
 				}
 			</div>
