@@ -3,6 +3,7 @@ import axios from 'axios';
 import NavBar from './navbar';
 import { Link } from 'react-router';
 import _ from 'underscore';
+import NetworkHelperClass from '../helpers/networkHelper'
 
 export default class ShowVarInfo extends Component {
 
@@ -18,7 +19,7 @@ export default class ShowVarInfo extends Component {
 	}
 	componentWillMount() {
 
-		axios.get(`https://api.particle.io/v1/devices/${this.state.device_id}/${this.state.varName}?access_token=d6576383889e1526c95853391923584b508071c4`)
+		axios.get(`${NetworkHelperClass.getUrl()}/${this.state.device_id}/${this.state.varName}?access_token=${NetworkHelperClass.getAccessToken()}`)
 			.then( (response) => {
 				this.setState({
 					varInfo: response.data,
