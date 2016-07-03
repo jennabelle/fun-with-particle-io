@@ -1,6 +1,6 @@
 # Fun With Particle IO API
 
-the full stack with particle io api
+A web portal for Particle.io users to manage their IoT devices.
 
 ###Getting Started###
 
@@ -10,7 +10,7 @@ the full stack with particle io api
 
     npm start
 
-Navigate to 
+Go to:
 
     http://localhost:8080
 
