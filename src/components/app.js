@@ -15,6 +15,7 @@ export default class App extends Component {
 	getDeviceList() {
 
 		// let that = this;
+		
 		axios.get(`${NetworkHelperClass.getUrl()}?access_token=${NetworkHelperClass.getAccessToken()}`)
 			.then( (response) => {
 				this.setState({

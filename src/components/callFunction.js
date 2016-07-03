@@ -17,7 +17,7 @@ export default class callFunction extends Component {
 	}
 	componentWillMount() {
 
-		axios.post(`https://api.particle.io/v1/devices/${this.state.device_id}/${this.state.functionName}?access_token=d6576383889e1526c95853391923584b508071c4`,
+		axios.post(`${NetworkHelperClass.getUrl()}/${this.state.device_id}/${this.state.functionName}?access_token=${NetworkHelperClass.getAccessToken()}`,
 				{ arg: 'testing callFunction!' })
 			.then( (response) => {
 					this.setState({
