@@ -31,8 +31,6 @@ export default class ShowVarInfo extends Component {
 	}
 	render() {
 
-		console.log('inside render, varCoreInfo: ', this.state.varCoreInfo)
-
 		return (
 			<div>
 				<NavBar />
