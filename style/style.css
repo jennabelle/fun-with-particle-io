@@ -36,11 +36,17 @@
 .view_device_info {
   margin: 50px;
   border: 25px;
-  padding: 25px
+  padding: 25px;
 }
 
 .view_device_function {
   margin: 50px;
   border: 25px;
-  padding: 25px
+  padding: 25px;
+}
+
+.view_device_variable {
+  margin: 50px;
+  border: 25px;
+  padding: 25px;
 }
