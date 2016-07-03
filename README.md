@@ -5,19 +5,25 @@ the full stack with particle io api
 ###Getting Started###
 
 	npm install
-	npm start
+
+###To Start Dev Server###
+
+    npm start
+
+Navigate to 
+
+    http://localhost:8080/
 
 ###Tech Stack###
 
     React
     React Router
-    Redux (planned)
     ES6
     Webpack
-    Express
-    Mongoose (ORM)
-    MongoDB (mlab)
+    Webpack-dev-server
     Axios
-    deployed on Heroku (planned)
     Bootstrap
     (planned) - Mocha/Chai
+    (planned) - SASS
+    (planned) - Redux
+    (planned) - deploy on Heroku

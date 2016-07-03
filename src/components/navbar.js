@@ -20,7 +20,7 @@ export default class NavBar extends Component  {
 	  			<div className="collapse navbar-collapse">
 	  				<ul className="nav navbar-nav navbar-right">
 	                    <li className="active"><Link to="/">HOME</Link></li>
-	  					<li><a href="">LOG OUT</a></li>
+	  					<li><Link to="/">LOG OUT</Link></li>
 	  				</ul>
 	  			</div>
 	  		</div>

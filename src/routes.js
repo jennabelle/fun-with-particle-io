@@ -17,7 +17,7 @@ export default (
 
     <Route path="ShowDeviceInfo/:deviceId/:functionName" component={ CallFunction } />
     <Route path="ShowVarInfo/:deviceId/:varName" component= { ShowVarInfo } />
-  </Router>
+   </Router>
 );
 
 /* valid routes
