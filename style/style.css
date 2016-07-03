@@ -11,10 +11,6 @@
 	background-color: #F7F7F7;
 }
 
-.app_header {
-	background-image: url("../src/images/particle-horizontal.png");
-}
-
 .btn_get_device_list {
     margin-top: 50px;
     margin-bottom: 60px;

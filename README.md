@@ -14,6 +14,14 @@ Go to:
 
     http://localhost:8080
 
+###Notes on Process###
+
+What was easy:
+
+
+What was difficult:
+
+
 ###Tech Stack###
 
     React
