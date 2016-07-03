@@ -35,7 +35,9 @@ export default class ShowVarInfo extends Component {
 		return (
 			<div>
 				<NavBar />
-				{ this.state.varInfo ? <p><b>Variable Info: </b>Hello</p> : null }
+				{ this.state.varInfo ? <p><b>CMD: </b>{ this.state.varInfo['cmd'] }</p> : null }
+				{ this.state.varInfo ? <p><b>Name: </b>{ this.state.varInfo['name'] }</p> : null }
+				{ this.state.varInfo ? <p><b>Result: </b>{ this.state.varInfo['result'] }</p> : null }
 			</div>
 			);
 	}

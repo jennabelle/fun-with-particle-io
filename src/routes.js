@@ -8,7 +8,6 @@ import ShowVarInfo from './components/showVarInfo';
 
 export default (
   <Router history={ browserHistory }>
-
     <Route path="/" component={ App } />
     <Route path="ShowDeviceInfo" component={ ShowDeviceInfo } />
 
@@ -18,7 +17,6 @@ export default (
 
     <Route path="ShowDeviceInfo/:deviceId/:functionName" component={ CallFunction } />
     <Route path="ShowVarInfo/:deviceId/:varName" component= { ShowVarInfo } />
-
   </Router>
 );
 
