@@ -3,6 +3,7 @@ import axios from 'axios'
 import NavBar from './navbar'
 import { Link } from 'react-router'
 import _ from 'underscore'
+import NetworkHelperClass from '../helpers/networkHelper'
 
 export default class ShowDeviceInfo extends Component {
 
@@ -19,7 +20,7 @@ export default class ShowDeviceInfo extends Component {
 	}
 	componentWillMount() {
 
-		axios.get(`https://api.particle.io/v1/devices/${this.state.device_id}?access_token=d6576383889e1526c95853391923584b508071c4`)
+		axios.get(`${NetworkHelperClass.getUrl()}/${this.state.device_id}?access_token=${NetworkHelperClass.getAccessToken()}`)
 			.then( (response) => {
 					this.setState({
 						device_object: response.data,
@@ -27,7 +28,7 @@ export default class ShowDeviceInfo extends Component {
 					});
 			})
 			.catch( (response) => {
-					console.log('show device info error! response: ', response)
+					console.log('show device error! response: ', response)
 			})
 	}
 	render() {
