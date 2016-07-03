@@ -22,11 +22,11 @@ export default (
 
 /* valid routes
 
-path      			component
-/         			App
-/showDeviceInfo   	showDeviceInfo
+path      								component
+/         								App
+/ShowDeviceInfo   						ShowDeviceInfo
+/ShowDeviceInfo/:deviceId				ShowDeviceInfo
+/ShowDeviceInfo/:deviceId/:functionName	CallFunction
+/ShowVarInfo/:deviceId/:varName			ShowVarInfo
 
 */
-
-
-// https://api.particle.io/v1/devices/2a002c000a47343232363230/rssi?access_token=d6576383889e1526c95853391923584b508071c4
