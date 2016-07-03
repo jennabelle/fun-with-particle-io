@@ -27,8 +27,6 @@ export default class ShowDeviceInfo extends Component {
 	}
 	render() {
 
-		console.log('inside render! this.state.device_object: ', this.state.device_object)
-
 		return (
 			<div>
 				<p><b>Name:</b> { this.state.device_object.name }</p>
@@ -41,11 +39,12 @@ export default class ShowDeviceInfo extends Component {
 				{ this.state.device_object.cellular ? <p><b>Celluluar:</b> { this.state.device_object.cellular.toString() }</p> : null }
 				
 				<p><b>Functions:</b></p>
-				{ this.state.device_object.functions ? this.state.device_object.functions.map( (name, index) => {
-							return <ul key={index}><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${name}` }>{ name }</Link></li></ul>
+				{ 
+					this.state.device_object.functions ? this.state.device_object.functions.map( (name, index) => {
+							return <ul key={ index }><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${name}` }>{ name }</Link></li></ul>
 					}) : null
 				}
-				
+
 			</div>
 			);
 	}

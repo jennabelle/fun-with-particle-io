@@ -10,7 +10,8 @@ export default class callFunction extends Component {
 
 		this.state = {
 			device_id: this.props.params.deviceId,
-			functionName: this.props.params.functionName
+			functionName: this.props.params.functionName,
+			callFunctionResponse: null
 		}
 	}
 	componentWillMount() {
@@ -19,6 +20,9 @@ export default class callFunction extends Component {
 				{ arg: 'testing callFunction!' })
 			.then( (response) => {
 					console.log('call function response: ', response.data)
+					this.setState({
+						callFunctionResponse: response.data
+					})
 			})
 			.catch( (response) => {
 					console.log('call function error! response: ', response)
@@ -26,10 +30,15 @@ export default class callFunction extends Component {
 	}
 	render() {
 		
-		console.log('inside call function component!')
+		console.log('this.state.callFunctionResponse: ', this.state.callFunctionResponse)
 
-		return <div>callFunction!</div>
+		return (
+			<div>
+				{ this.state.callFunctionResponse ? <p><b>Id: </b>{ this.state.callFunctionResponse.id }</p> : null }
+				{ this.state.callFunctionResponse ? <p><b>Last App: </b>{ this.state.callFunctionResponse.last_app }</p> : null }
+				{ this.state.callFunctionResponse ? <p><b>Connected: </b>{ this.state.callFunctionResponse.connected.toString() }</p> : null }
+				{ this.state.callFunctionResponse ? <p><b>Return Value: </b>{ this.state.callFunctionResponse.return_value }</p> : null }
+			</div>
+			);
 	}
 }
-
-// https://api.particle.io/v1/devices/2a002c000a47343232363230/rand?access_token=d6576383889e1526c95853391923584b508071c4
