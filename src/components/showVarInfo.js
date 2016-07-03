@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import NavBar from './navbar';
 import { Link } from 'react-router';
-import _ from 'underscore';
 
 export default class ShowVarInfo extends Component {
 
@@ -25,7 +24,7 @@ export default class ShowVarInfo extends Component {
 				})
 			})
 			.catch( (response) => {
-					console.log('show var error! response: ', response)
+					console.log('show var error! error: ', response)
 			})
 	}
 	render() {
