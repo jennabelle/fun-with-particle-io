@@ -12,7 +12,7 @@ the full stack with particle io api
 
 Navigate to 
 
-    http://localhost:8080/
+    http://localhost:8080
 
 ###Tech Stack###
 
@@ -23,7 +23,9 @@ Navigate to
     Webpack-dev-server
     Axios
     Bootstrap
-    (planned) - Mocha/Chai
+    Mocha
+    Chai
     (planned) - SASS
     (planned) - Redux
-    (planned) - deploy on Heroku
+    (planned) - User Authentication
+    (planned) - Deploy on Heroku
