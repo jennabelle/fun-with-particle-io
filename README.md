@@ -28,5 +28,5 @@ Go to:
     (planned) - SASS
     (planned) - Redux
     (planned) - Pagination
-    (planned) - User Authentication (will need MongoDB, Mongoose.js, Express.js)
+    (planned) - User Authentication (need MongoDB, Mongoose.js, Express.js)
     (planned) - Deploy on Heroku
