@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import NavBar from './navbar';
 import { Link } from 'react-router';
-import _ from 'underscore';
 
 export default class App extends Component {
 
@@ -29,7 +28,6 @@ export default class App extends Component {
 	render() {
 
 		return (
-
 			<div>
 				<NavBar />
 				<div className='app_background'>
