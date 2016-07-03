@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/app';
-import ShowDeviceInfo from './components/ShowDeviceInfo';
+import ShowDeviceInfo from './components/showDeviceInfo';
 import CallFunction from './components/callFunction';
 import ShowVarInfo from './components/showVarInfo';
 
