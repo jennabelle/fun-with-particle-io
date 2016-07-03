@@ -27,5 +27,5 @@ Go to:
     Chai
     (planned) - SASS
     (planned) - Redux
-    (planned) - User Authentication
+    (planned) - User Authentication (will need MongoDB, Mongoose.js, Express.js)
     (planned) - Deploy on Heroku
