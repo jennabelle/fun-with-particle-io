@@ -21,15 +21,10 @@ export default class App extends Component {
 				this.setState({
       		device_list: response.data
     		});
-				
-				// this.updateDeviceList( response.data );
 			})
 			.catch( (response) => {
 				console.log('Error in getDeviceList! Error: ', response);
 			})
-	}
-	updateDeviceList( newValue ) {
-		console.log('inside updateDeviceList()!');
 	}
 	render() {
 
