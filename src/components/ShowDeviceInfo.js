@@ -55,8 +55,8 @@ export default class ShowDeviceInfo extends Component {
 					
 					<p><b>Functions:</b></p>
 					{ 
-						this.state.device_object.functions ? this.state.device_object.functions.map( (name, index) => {
-								return <ul key={ index }><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${name}` }>{ name }</Link></li></ul>
+						this.state.device_object.functions ? this.state.device_object.functions.map( (val, index) => {
+								return <ul key={ index }><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${val}` }>{ val }</Link></li></ul>
 						}) : null
 					}
 
