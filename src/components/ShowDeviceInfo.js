@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import NavBar from './navbar';
-import { Link } from 'react-router';
-import _ from 'underscore';
+import React, { Component } from 'react'
+import axios from 'axios'
+import NavBar from './navbar'
+import { Link } from 'react-router'
+import _ from 'underscore'
 
 export default class ShowDeviceInfo extends Component {
 
@@ -59,7 +59,6 @@ export default class ShowDeviceInfo extends Component {
 								return <ul key={ index }><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${val}` }>{ val }</Link></li></ul>
 						}) : null
 					}
-
 					<p><b>Variables:</b></p>
 					{
 						this.state.variable_object_keys.map( (val, index) => {
