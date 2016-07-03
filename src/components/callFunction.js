@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import NavBar from './navbar';
 import { Link } from 'react-router';
-import _ from 'underscore';
+import NetworkHelperClass from '../helpers/networkHelper'
 
 export default class callFunction extends Component {
 

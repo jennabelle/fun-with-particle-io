@@ -15,8 +15,7 @@ export default class App extends Component {
 	getDeviceList() {
 
 		// let that = this;
-
-		axios.get('https://api.particle.io/v1/devices?access_token=d6576383889e1526c95853391923584b508071c4')
+		axios.get(`${NetworkHelperClass.getUrl()}?access_token=${NetworkHelperClass.getAccessToken()}`)
 			.then( (response) => {
 				this.setState({
       		device_list: response.data
