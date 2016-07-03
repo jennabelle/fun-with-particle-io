@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './navbar';
 import { Link } from 'react-router';
 import _ from 'underscore';
 
@@ -43,6 +44,7 @@ export default class ShowDeviceInfo extends Component {
 
 		return (
 			<div>
+				<NavBar />
 				<p><b>Name:</b> { this.state.device_object.name }</p>
 				{ this.state.device_object.connected ? <p><b>Connected:</b> { this.state.device_object.connected.toString() }</p> : null }
 				<p><b>Last IP Address:</b> { this.state.device_object.last_ip_address }</p>

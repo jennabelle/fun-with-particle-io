@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './navbar';
 import { Link } from 'react-router';
 import _ from 'underscore';
 
@@ -31,6 +32,7 @@ export default class callFunction extends Component {
 		
 		return (
 			<div>
+				<NavBar />
 				{ this.state.callFunctionResponse ? <p><b>Id: </b>{ this.state.callFunctionResponse.id }</p> : null }
 				{ this.state.callFunctionResponse ? <p><b>Last App: </b>{ this.state.callFunctionResponse.last_app }</p> : null }
 				{ this.state.callFunctionResponse ? <p><b>Connected: </b>{ this.state.callFunctionResponse.connected.toString() }</p> : null }
