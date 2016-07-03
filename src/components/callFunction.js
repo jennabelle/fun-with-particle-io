@@ -19,7 +19,6 @@ export default class callFunction extends Component {
 		axios.post(`https://api.particle.io/v1/devices/${this.state.device_id}/${this.state.functionName}?access_token=d6576383889e1526c95853391923584b508071c4`,
 				{ arg: 'testing callFunction!' })
 			.then( (response) => {
-					console.log('call function response: ', response.data)
 					this.setState({
 						callFunctionResponse: response.data
 					})
@@ -30,8 +29,6 @@ export default class callFunction extends Component {
 	}
 	render() {
 		
-		console.log('this.state.callFunctionResponse: ', this.state.callFunctionResponse)
-
 		return (
 			<div>
 				{ this.state.callFunctionResponse ? <p><b>Id: </b>{ this.state.callFunctionResponse.id }</p> : null }
