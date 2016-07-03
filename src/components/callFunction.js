@@ -33,10 +33,12 @@ export default class callFunction extends Component {
 		return (
 			<div>
 				<NavBar />
-				{ this.state.callFunctionResponse ? <p><b>Id: </b>{ this.state.callFunctionResponse.id }</p> : null }
-				{ this.state.callFunctionResponse ? <p><b>Last App: </b>{ this.state.callFunctionResponse.last_app }</p> : null }
-				{ this.state.callFunctionResponse ? <p><b>Connected: </b>{ this.state.callFunctionResponse.connected.toString() }</p> : null }
-				{ this.state.callFunctionResponse ? <p><b>Return Value: </b>{ this.state.callFunctionResponse.return_value }</p> : null }
+				<div className="row view_device_list">
+					{ this.state.callFunctionResponse ? <p><b>Id: </b>{ this.state.callFunctionResponse.id }</p> : null }
+					{ this.state.callFunctionResponse ? <p><b>Last App: </b>{ this.state.callFunctionResponse.last_app }</p> : null }
+					{ this.state.callFunctionResponse ? <p><b>Connected: </b>{ this.state.callFunctionResponse.connected.toString() }</p> : null }
+					{ this.state.callFunctionResponse ? <p><b>Return Value: </b>{ this.state.callFunctionResponse.return_value }</p> : null }
+				</div>
 			</div>
 			);
 	}

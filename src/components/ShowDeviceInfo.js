@@ -43,28 +43,30 @@ export default class ShowDeviceInfo extends Component {
 		return (
 			<div>
 				<NavBar />
-				<p><b>Name:</b> { this.state.device_object.name }</p>
-				{ this.state.device_object.connected ? <p><b>Connected:</b> { this.state.device_object.connected.toString() }</p> : null }
-				<p><b>Last IP Address:</b> { this.state.device_object.last_ip_address }</p>
-				<p><b>Last Heard:</b> { this.state.device_object.last_heard }</p>
-				<p><b>Product Id:</b> { this.state.device_object.product_id }</p>
-				<p><b>Platform Id:</b> { this.state.device_object.platform_id }</p>
-				<p><b>Status:</b> { this.state.device_object.status }</p>
-				{ this.state.device_object.cellular ? <p><b>Celluluar:</b> { this.state.device_object.cellular.toString() }</p> : null }
-				
-				<p><b>Functions:</b></p>
-				{ 
-					this.state.device_object.functions ? this.state.device_object.functions.map( (name, index) => {
-							return <ul key={ index }><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${name}` }>{ name }</Link></li></ul>
-					}) : null
-				}
+				<div className="row view_device_info">
+					<p><b>Name:</b> { this.state.device_object.name }</p>
+					{ this.state.device_object.connected ? <p><b>Connected:</b> { this.state.device_object.connected.toString() }</p> : null }
+					<p><b>Last IP Address:</b> { this.state.device_object.last_ip_address }</p>
+					<p><b>Last Heard:</b> { this.state.device_object.last_heard }</p>
+					<p><b>Product Id:</b> { this.state.device_object.product_id }</p>
+					<p><b>Platform Id:</b> { this.state.device_object.platform_id }</p>
+					<p><b>Status:</b> { this.state.device_object.status }</p>
+					{ this.state.device_object.cellular ? <p><b>Celluluar:</b> { this.state.device_object.cellular.toString() }</p> : null }
+					
+					<p><b>Functions:</b></p>
+					{ 
+						this.state.device_object.functions ? this.state.device_object.functions.map( (name, index) => {
+								return <ul key={ index }><li><Link to={ `ShowDeviceInfo/${this.state.device_id}/${name}` }>{ name }</Link></li></ul>
+						}) : null
+					}
 
-				<p><b>Variables:</b></p>
-				{
-					this.state.variable_object_keys.map( (val, index) => {
-						return <ul key={ index }><li><Link to={ `ShowVarInfo/${this.state.device_id}/${val}` }>{ val }</Link></li></ul>
-					})
-				}
+					<p><b>Variables:</b></p>
+					{
+						this.state.variable_object_keys.map( (val, index) => {
+							return <ul key={ index }><li><Link to={ `ShowVarInfo/${this.state.device_id}/${val}` }>{ val }</Link></li></ul>
+						})
+					}
+				</div>
 			</div>
 			);
 	}
