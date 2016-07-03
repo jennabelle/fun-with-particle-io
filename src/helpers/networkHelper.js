@@ -6,7 +6,7 @@ export default {
 
   getUrl() {
     return url
-  }
+  },
   getAccessToken() {
     return access_token
   }
