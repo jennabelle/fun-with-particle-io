@@ -4,7 +4,12 @@ A web portal for Particle.io users to manage their IoT devices.
 
 ###Getting Started###
 
+    git clone https://github.com/jennabelle/fun-with-particle-io.git
+
+    cd fun-with-particle-io
+
 	npm install
+    
     bower install
 
 ###To Start Dev Server###
