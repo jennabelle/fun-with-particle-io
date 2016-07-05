@@ -5,6 +5,7 @@ A web portal for Particle.io users to manage their IoT devices.
 ###Getting Started###
 
 	npm install
+    bower install
 
 ###To Start Dev Server###
 
