@@ -31,7 +31,7 @@ export default class App extends Component {
 		return (
 			<div>
 				<NavBar />
-				<div className='app_background'>
+				<div id="app_bg" className='app_background'>
 
 					<img src="http://blog.particle.io/images/particle-horizontal-dark.png" className="col-md-6 col-md-offset-2 logo" />
 

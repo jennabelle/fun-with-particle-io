@@ -4,7 +4,7 @@ import NavBar from './navbar'
 import { Link } from 'react-router'
 import NetworkHelperClass from '../helpers/networkHelper'
 
-export default class callFunction extends Component {
+export default class CallFunction extends Component {
 
 	constructor(props) {
 		super(props)
